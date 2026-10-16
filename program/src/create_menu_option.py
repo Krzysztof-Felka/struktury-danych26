@@ -11,7 +11,7 @@ def create_menu_option(
         180,
         height,
         text=text,
-        font=("Arial", 11, "bold"),
+        font=("Artifakt Element", 11, "bold"),
         fill="white"
     )
 

@@ -5,7 +5,7 @@ def create_window():
     # Utworzenie głównego okna + canvas:
 
     window = tk.Tk()
-    window.title("VectorTools")
+    window.title("SNEP")
     window.resizable(False, False)
 
     canvas = tk.Canvas(
@@ -20,9 +20,11 @@ def create_window():
 
     # Grafika tła:
 
-    image_path = Path(__file__).resolve().with_name("snep.png")
-    window.background_screen = tk.PhotoImage(file=str(image_path)
-    )
+    current_dir = Path(__file__).resolve().parent
+
+    image_path = current_dir / "img" / "snep.png"
+
+    window.background_screen = tk.PhotoImage(file=str(image_path))
 
     canvas.create_image(
         0,
@@ -34,10 +36,18 @@ def create_window():
 
     # Tytuł programu:
     canvas.create_text(
-        200,
+        80,
         50,
-        text="VectorTools",
-        font=("Arial", 30, "bold"),
+        text="SNEP",
+        font=("Artifakt Element", 18, "bold"),
+        fill="white"
+    )
+    # Podtytuł programu:
+    canvas.create_text(
+        300,
+        70,
+        text=("Symulator Niezależnych Elementów Przestrzennych"),
+        font=("Artifakt Element", 16, "normal"),
         fill="white"
     )
 
@@ -48,7 +58,7 @@ def create_window():
         180,
         420,
         text="Wybierz operację:",
-        font=("Arial", 16, "bold"),
+        font=("Artifakt Element", 12, "bold"),
         fill="white"
     )
 

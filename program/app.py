@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.join(os.path.dirname(__file__)))
+
 from src.create_window import create_window
 from src.create_menu_option import create_menu_option
 from src.menu_operations.close_program import close_program
