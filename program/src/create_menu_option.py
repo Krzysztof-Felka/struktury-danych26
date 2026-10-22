@@ -5,8 +5,14 @@ def create_menu_option(
     canvas: tk.Canvas,
     height: int,
     text: str,
-    operation: Callable
+    operation: Callable[[], None],
+    on_complete: Callable[[], None] | None = None
 ):
+    def handle_click(_event: tk.Event) -> None:
+        operation()
+        if on_complete is not None:
+            on_complete()
+
     text_id = canvas.create_text(
         180,
         height,
@@ -18,7 +24,7 @@ def create_menu_option(
     canvas.tag_bind(
         text_id,
         "<Button-1>",
-        lambda event: operation()
+        handle_click
     )
 
     canvas.tag_bind(
