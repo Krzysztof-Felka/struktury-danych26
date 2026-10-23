@@ -8,7 +8,7 @@ from src.menu_operations.show_layer_info import show_layer_info
 
 window, canvas = create_window()
 
-create_menu_option(canvas, 410, "Wczytaj warstwę", lambda: load_data_and_remember_outcome(), lambda: update_menu())
+create_menu_option(canvas, 410, "Wczytaj warstwę", lambda: load_data_and_remember_outcome(), lambda: update_menu(canvas))
 create_menu_option(canvas, 440, "Wyświetl warstwę", lambda: show_layer())
 create_menu_option(canvas, 470, "Wyświetl informacje o warstwie", lambda: show_layer_info())
 create_menu_option(canvas, 500, "Zamknij program", lambda: close_program(window))
