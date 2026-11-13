@@ -2,5 +2,10 @@
 /Microsoft
 scripts/test.py
 scripts/*.json
-*.sql
-*.geojson
+sql/*
+scripts/*.geojson
+scripts/dane
+*.tif
+scripts/dane.csv
+powtórka/*
+zaliczenie/dane

@@ -1,0 +1,1 @@
+Brakuje kolumn średnia złożoność lini i średnie wypełnienie przestrzeni

@@ -6,10 +6,11 @@ from src.menu_operations.load_data import load_data_and_remember_outcome
 from src.menu_operations.show_layer import show_layer
 from src.menu_operations.show_layer_info import show_layer_info
 from src.menu_operations.save_data import save_data
-
+from src.menu_operations.simple_operations import simple_operations
 
 window, canvas = create_window()
 
+create_menu_option(canvas, 350, "Proste operacje", lambda: simple_operations(), lambda: update_menu(canvas))
 create_menu_option(canvas, 380, "Wczytaj warstwę", lambda: load_data_and_remember_outcome(), lambda: update_menu(canvas))
 create_menu_option(canvas, 410, "Wyświetl warstwę", lambda: show_layer())
 create_menu_option(canvas, 440, "Wyświetl informacje o warstwie", lambda: show_layer_info())

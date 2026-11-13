@@ -56,7 +56,7 @@ def create_window():
 
     canvas.create_text(
         180,
-        350,
+        320,
         text="Wybierz operację:",
         font=("Artifakt Element", 15, "bold"),
         fill="white"
